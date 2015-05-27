@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MyScene.h"
+#import <SpriteKit/SpriteKit.h>
 
 @interface ViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    SKView *skView=(SKView *)self.view;
+    
+    MyScene *scene = [[MyScene alloc] initWithSize:skView.bounds.size];
+    
+    [skView presentScene:scene];
+    
 }
 
 - (void)didReceiveMemoryWarning {
